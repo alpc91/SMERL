@@ -197,12 +197,25 @@
           <!-- <center><span style="font-size:20px">THU CS, THUAI, BNRist</span></center> -->
           </div>
 
-          <div><center><span style="font-size:24px"><a href="https://scholar.google.com/citations?user=AKppgMAAAAAJ&hl=en" target="_blank">Jiaqi Han*</a></span></center>
+          <div><center><span style="font-size:24px">Ling Wang*</a></span></center>
           <!-- <center><span style="font-size:20px">THU CS, THUAI, BNRist</span></center> -->
           </div>
 
+          <div><center><span style="font-size:24px">Yu Du</a></span></center>
+            <!-- <center><span style="font-size:20px">THU CS, THUAI, BNRist</span></center> -->
+          </div>
+
+          <div><center><span style="font-size:24px">Tianrui Xue</a></span></center>
+            <!-- <center><span style="font-size:20px">THU CS, THUAI, BNRist</span></center> -->
+          </div>
+          
+
           <div><center><span style="font-size:24px"><a href="https://scholar.google.com/citations?user=DbviELoAAAAJ&hl=en" target="_blank">Fuchun Sun</a></span></center>
           <!-- <center><span style="font-size:20px">THU CS, THUAI, BNRist, THU-Bosch JCML Center</span></center> -->
+          </div>
+
+          <div><center><span style="font-size:24px">Jianwei Zhang</a></span></center>
+            <!-- <center><span style="font-size:20px">THU CS, THUAI, BNRist</span></center> -->
           </div>
 
           <div><center><span style="font-size:24px"><a href="https://gsai.ruc.edu.cn/addons/teacher/index/info.html?user_id=31&ruccode=ADIIMVRnBzFXMFdnVTAIOw%3D%3D&ln=en" target="_blank">Wenbing Huang</a></span></center>
@@ -211,11 +224,11 @@
       </div>
       <table align=center width=600px style="padding-top:0px;padding-bottom:0px">
           <tr>
-            <td align=center width=600px><center><span style="font-size:15px">THU CS, THUAI, BNRist, THU-Bosch JCML Center, RUC GSAI, * Equal contribution</span></center></td>
+            <td align=center width=600px><center><span style="font-size:15px">THU CS, THUAI, BNRist, THU-Bosch JCML Center, XRHT, NUE SEE, NYU CAS, UH TAMS, RUC GSAI, BKLBDMA, * Equal contribution</span></center></td>
           <tr/>
       </table>
       <!-- <center><span style="font-size:24px;"><a href='https://icml.cc/virtual/2023/oral/25559'>ICML 2023 Oral</a></span></center> -->
-      <center><span style="font-size:24px;"><a href='https://icml.cc/virtual/2023/poster/24996'>ICML 2024 Poster</a></span></center>
+      <center><span style="font-size:24px;"><a href='https://icml.cc/virtual/2023/poster/24996'>ICML 2024</a></span></center>
 
       <div class="table-like" style="justify-content:space-evenly;max-width:800px;margin:auto;padding:5px">
         <div><center><span style="font-size:24px"><a href="https://arxiv.org/abs/2305.18951">&nbsp;&nbsp;&nbsp;[Paper]</a></span></center></div>
@@ -228,39 +241,49 @@
       <br>
 
       <div style="width:1024px; margin:0 auto; text-align=right;">
-        Learning a shared policy that guides the locomotion of different agents is of core interest in Reinforcement Learning (RL), which leads to the study of morphology-agnostic RL. However, existing benchmarks are highly restrictive in the choice of starting point and target point, constraining the movement of the agents within 2D space. In this work, we propose a novel setup for morphology-agnostic RL, dubbed Subequivariant Graph RL in 3D environments (3D-SGRL). Specifically, we first introduce a new set of more practical yet challenging benchmarks in 3D space that allows the agent to have full Degree-of-Freedoms to explore in arbitrary directions starting from arbitrary configurations. Moreover, to optimize the policy over the enlarged state-action space, we propose to inject geometric symmetry, i.e., subequivariance, into the modeling of the policy and Q-function such that the policy can generalize to all directions, improving exploration efficiency. This goal is achieved by a novel SubEquivariant Transformer (SET) that permits expressive message exchange. Finally, we evaluate the proposed method on the proposed benchmarks, where our method consistently and significantly outperforms existing approaches on single-task, multi-task, and zero-shot generalization scenarios. Extensive ablations are also conducted to verify our design.
+        Learning policies for multi-entity systems in 3D environments is far more complicated against single-entity scenarios, due to the exponential expansion of the global state space as the number of entities increases. One potential solution of alleviating the exponential complexity is dividing the global space into independent local views that are invariant to transformations including translations and rotations. To this end, this paper proposes Subequivariant Hierarchical Neural Networks (SHNN) to facilitate multi-entity policy learning. In particular, SHNN first dynamically decouples the global space into local entity-level graphs via task assignment. Second, it leverages subequivariant message passing over the local entity-level graphs to devise local reference frames, remarkably compressing the representation redundancy, particularly in gravity-affected environments. Furthermore, to overcome the limitations of existing benchmarks in capturing the subtleties of multi-entity systems under the Euclidean symmetry, we propose the Multi-entity Benchmark (MEBEN), a new suite of environments tailored for exploring a wide range of multi-entity reinforcement learning. Extensive experiments demonstrate significant advancements of SHNN on the proposed benchmarks compared to existing methods. Comprehensive ablations are conducted to verify the indispensability of task assignment and subequivariance.
       </div>
+      <br><hr>
+
+
       <table align="center" width="768px"><tbody><tr><td width="768px">
-        <center><a href="resources/teaser.gif"><img src="resources/teaser.gif" width="768px" ></img></a></center>
+        <center><a href="resources/teaser.pdf"><img src="resources/teaser.pdf" width="768px" ></img></a></center>
         </td></tr></tbody></table>
-        <br><hr>
 
-      <center><h1>3D-SGRL</h1></center>
-      <div style="width:1024px; margin:0 auto; text-align=right">
-        In spite of the fruitful progress by morphology-agnostic RL, in this work, we identify several critical setups that have been over-simplified in existing benchmarks, giving rise to a limited state/action space such that the obtained policy is unable to explore the entire 3D space. In particular, the agents are assigned a fixed starting point and restricted to moving towards a single direction along the x-axis, leading to 2D motions only. Nevertheless, in a more realistic setup as depicted in Figure 1, the agents would be expected to have full Degree-of-Freedoms (DoFs) to turn and move in arbitrary directions starting from arbitrary configurations. To address the concern, we extend the existing environments to a set of new benchmarks in 3D space, which meanwhile introduces significant challenges to morphology-agnostic RL due to the massive enlargement of the state-action space for policy optimization.
+
+      <div style="width:1024px; margin:0 auto; text-align=right;">
+        Illustration of the symmetry in our 3D multi-entity physical environments. In this example, there are two agents (red and blue) navigating towards two objects (grey). To mitigate the exponential-growth complexity, we conduct task assignment to decouple the whole state space into local views (the orange and green transparent coordinate frames), where one agent is assigned for one object. These local views can be represented by local reference frame (LRF), leading to representations that are independent of any translation, or rotation around the gravity direction of the global coordinates of the entities. Such symmetry is called E(3) subequivariance, distinct from conventional E(3) equivariance, accounting for gravitational effects. In form, subequivariance is encapsulated by the group Eg(3)-translations/rotations/reflections along gravity (a 3D Euclidean subgroup of E(3)).
       </div>
-    
+      <br><hr>
 
-      <table align="center" width="1024px"><tbody><tr><td width="1024px">
-        <center><a href="resources/teaser_table.pdf"><img src="resources/teaser_table.pdf" width="1024px" ></img></a></center>
-        </td></tr></tbody></table>
-        <br><hr>
+
       
       
 
-      <center><h1>SubEquivariant Transformer (SET)</h1></center>
+      <center><h1>Subequivariant Hierarchical Neural Networks (SHNN)</h1></center>
       <div style="width:1024px; margin:0 auto; text-align=right">
-        Optimizing the policy in our new setup is prohibitively dif- ficult, and existing morphology-agnostic RL frameworks like (Huang et al., 2020; Hong et al., 2021) are observed to be susceptible to getting stuck in the local minima and exhibited poor generalization in our experiments. To this end, we propose to inject geometric symmetry (Cohen & Welling, 2016; Cohen & Welling, 2017; Worrall et al., 2017; van der Pol et al., 2020) into the design of the policy network to compact the space redundancy in a lossless way (van der Pol et al., 2020). In particular, we restrict the policy network to be subequivariant in two senses (Han et al., 2022a): 1. the output action will rotate in the same way as the input state of the agent; 2. the equivariance is partially relaxed to take into account the effect of gravity in the environment. We design SubEquivariant Transformer (SET) with a novel architecture that satisfies the above constraints while also permitting ex- pressive message propagation through self-attention. Upon SET, the action and Q-function could be obtained with desir- able symmetries guaranteed. We term our entire task setup and methodology as Subequivariant Graph Reinforcement Learning in 3D Environments (3D-SGRL).
+        The flowchart of SHNN. On the left, The states of each entity i are processed into scalar features hi and directional geometric vectors Zi, and are updated by local entity-level subequivariant message passing in a task assignment entity-level graph. Finally, the invariant local reference frame body-level control policy is obtained. Here, function serves as the local entity-level subequivariant MP and E is the local entity-level graph topology. The right side illustrates our key innovation: the dynamic task assignment leveraging bipartite graph matching, and the construction of an Eg(3)-equivariant local reference frame for each entity to address local transformations.
       </div>
       <table align="center" width="1024px"><tbody><tr><td width="1024px">
       <center><a href="resources/main.pdf"><img src = "resources/main.pdf" width="1024px"></img></a><br></center>
       </td></tr></tbody></table>
       <br/><hr>
 
+      <center><h1>Multi-entity Benchmark (MEBEN)</h1></center>
+      <div style="width:1024px; margin:0 auto; text-align=right">
+        Illustration of MEBEN: Team Reach (left) where agents cooperate to collectively reach all fixed balls, and Team Sumo (right) where agents engage in both cooperation and competition to push opponents away from the fixed ball. These tasks necessitate the decoupling of local transformations via dynamic task assignment graph construction from the overall structure (depicted by a fully connected graph), while employing Eg(3)-equivariance to effectively compress global state space.
+      </div>
+      <table align="center" width="768px"><tbody><tr><td width="768px">
+        <center><a href="resources/MeBen.pdf"><img src = "resources/MeBen.pdf" width="1024px"></img></a><br></center>
+        </td></tr></tbody></table>
+        <br/><hr>
+    
+
+
 
             <center id="sourceCode"><h1>Source Code</h1></center>
             <div style="width:1024px; margin:0 auto; text-align=right">
-            We have released our implementation in PyTorch on the github page. Try our code!
+            We have released our implementation in JAX on the github page. Try our code!
             <center><span style="font-size:28px"><a href='https://github.com/alpc91/SMERL'>[GitHub]</a></span></center>
             </div>
             <br><hr>
@@ -279,7 +302,7 @@
     <tr>
     <td width="19%" align=right>
     <!-- <a href="https://arxiv.org/abs/2305.18951"><img style="height:150px" src="resources/thumbnail.jpg"/></a> -->
-    <a href="https://arxiv.org/abs/2305.18951"><img class="layered-paper-big" style="height:175px" src="./resources/ICML2023_SGRL.png"/></a>
+    <a href="https://arxiv.org/abs/2305.18951"><img class="layered-paper-big" style="height:175px" src="./resources/ICML2024_SMERL.png"/></a>
     <!-- <center> -->
     <!-- <span style="font-size:20pt"><a href="xxx">[Paper]</a>
     <span style="font-size:20pt"><a href="xxx">[ArXiv]</a> -->
