@@ -125,8 +125,8 @@ class CustomComposer(object):
     agent_groups = agent_groups or {}
 
     # load components
-    if add_ground:
-      components['ground'].update(dict(component='ground'))
+    if 'ground' not in components:
+      components['ground']=dict(component='ground')
     components = {
         name: load_component(**value) for name, value in components.items()
     }
