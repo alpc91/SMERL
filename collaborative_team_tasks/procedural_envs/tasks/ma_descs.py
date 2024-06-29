@@ -142,15 +142,15 @@ def add_reach(env_desc: Dict[str, Any],
                                               )
     
   if num_agents == 1:
-      sumo_reward_type = reward_functions.nearest_distance_reward_1
+      reach_reward_type = reward_functions.nearest_distance_reward_1
   elif num_agents == 2:
-      sumo_reward_type = reward_functions.nearest_distance_reward_2
+      reach_reward_type = reward_functions.nearest_distance_reward_2
   elif num_agents >= 3:
-      sumo_reward_type = reward_functions.nearest_distance_reward_3
+      reach_reward_type = reward_functions.nearest_distance_reward_3
 
   components['ground'] = dict(component='ground',
                       reward_fns = dict(distance = dict(
-                      reward_type=sumo_reward_type,
+                      reward_type=reach_reward_type,
                       target=[
                           so(comp_name=f'ball{j}', sdname=f'Ball_{j}', indices=(0, 1)) for j,_ in enumerate(agents)],
                       obs=[
@@ -159,7 +159,7 @@ def add_reach(env_desc: Dict[str, Any],
                       done_bonus=0,
                       scale=centering_scale,),
                       win = dict(
-                      reward_type=sumo_reward_type,
+                      reward_type=reach_reward_type,
                       target=[
                           so(comp_name=f'ball{j}', sdname=f'Ball_{j}', indices=(0, 1)) for j,_ in enumerate(agents)],
                       obs=[
