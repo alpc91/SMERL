@@ -1,6 +1,6 @@
 ## Subequivariant Reinforcement Learning in 3D Multi-Entity Physical Environments ##
 ### ICML 2024
-#### [[Project Page]](https://alpc91.github.io/SMERL/) [[Paper]]()
+#### [[Project Page]](https://alpc91.github.io/SMERL/) [[Paper]](https://arxiv.org/abs/2407.12505/)
 
 ### Citation
 If you use this codebase for your research, please cite the paper:
